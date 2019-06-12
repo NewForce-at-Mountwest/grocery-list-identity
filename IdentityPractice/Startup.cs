@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using IdentityPractice.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IdentityPractice.Models;
 
 namespace IdentityPractice
 {
@@ -39,7 +40,7 @@ namespace IdentityPractice
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<ApplicationUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 

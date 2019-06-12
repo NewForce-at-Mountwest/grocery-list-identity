@@ -15,15 +15,15 @@ namespace IdentityPractice.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ListItemsController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public ListItemsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
         }
 
-        private Task<IdentityUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
+        private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
 
         // GET: ListItems
         public async Task<IActionResult> Index()
