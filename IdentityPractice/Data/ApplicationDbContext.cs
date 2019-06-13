@@ -26,8 +26,8 @@ namespace IdentityPractice.Data
             ApplicationUser user = new ApplicationUser
             {
                 Id = "1",
-                FirstName = "admin",
-                LastName = "admin",
+                FirstName = "George",
+                LastName = "Brown",
                 UserName = "admin@admin.com",
                 NormalizedUserName = "ADMIN@ADMIN.COM",
                 Email = "admin@admin.com",
